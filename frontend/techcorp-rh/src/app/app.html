@@ -7,7 +7,7 @@
     <meta name="description" content="Résumé de votre dashboard." />
     <meta name="robots" content="noindex, nofollow" />
     <meta name="theme-color" content="#1d4ed8" />
-    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="../../public/favicon.svg" type="image/svg+xml" />
     <!-- <link rel="stylesheet" href="css/main.css" /> -->
   </head>
   <body>
@@ -37,7 +37,7 @@
         </button>
 
         <a class="brand" href="dashboard-employe.html">
-          <img class="brand__logo" src="assets/logo.svg" alt="" width="32" height="32" />
+          <img class="brand__logo" src="../../public/logo.svg" alt="" width="32" height="32" />
           TechCorp RH
         </a>
 
@@ -45,8 +45,8 @@
           <div class="user">
             <span class="avatar" aria-hidden="true">CM</span>
             <div class="user__info">
-              <p class="user__name">Claire Martin</p>
-              <p class="user__role">Développeuse</p>
+              <p class="user__name">{{ currentUser.firstName }} {{ currentUser.lastName }}</p>
+              <p class="user__role">{{ currentUser.jobTitle }}</p>
             </div>
           </div>
           <a class="icon-link" href="login.html">
@@ -68,7 +68,7 @@
         </div>
       </header>
 
-      <nav class="app__sidebar sidebar" id="navigation" aria-label="Navigation principale">
+      <app-sidebar class="app__sidebar sidebar" id="navigation" aria-label="Navigation principale">
         <div class="nav__section">
           <h2 class="nav__heading" id="nav-perso">Mon espace</h2>
           <ul class="nav" role="list" aria-labelledby="nav-perso">
@@ -83,13 +83,13 @@
             <li><a class="nav__link" href="profil.html">Mon profil</a></li>
           </ul>
         </div>
-      </nav>
+      </app-sidebar>
 
       <main class="app__main" id="contenu" tabindex="-1">
         <div class="container">
           <div class="page-header">
             <div>
-              <h1>Bonjour Claire</h1>
+              <h1>Bonjour {{ currentUser.firstName }}</h1>
               <p class="page-header__subtitle">
                 Voici le résumé de votre activité au 8 octobre 2026.
               </p>
