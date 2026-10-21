@@ -17,7 +17,7 @@ import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Employee } from './models/employee';
 import { LEAVE_TYPE_LABELS, LeaveRequest } from './models/leave-request';
-import { email, readonly } from '@angular/forms/signals';
+// import { email, readonly } from '@angular/forms/signals';
 import { Sidebar } from './layout/sidebar/sidebar';
 
 @Component({
